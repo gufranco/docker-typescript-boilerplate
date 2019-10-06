@@ -1,6 +1,5 @@
 # TypeScript + TypeORM + Jest
 
-## Executar em desenvolvimento
 ```bash
 NODE_ENV=development \
 EXPRESS_PORT=8090 \
