@@ -1,5 +1,5 @@
 # LATEST LTS release
-FROM node:10-alpine
+FROM node:lts-alpine
 
 # Copy project, define workdir
 RUN mkdir -p /opt/app
