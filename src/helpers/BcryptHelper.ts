@@ -1,4 +1,4 @@
-import bcrypt from "bcryptjs";
+import bcryptjs from "bcryptjs";
 
 export default class BcryptHelper {
   /**
@@ -13,8 +13,8 @@ export default class BcryptHelper {
         throw new Error(`Missing BCRYPT_SALT environment var`);
       }
 
-      return bcrypt.hash(
-        await bcrypt.genSalt(parseInt(process.env.BCRYPT_SALT, 10)),
+      return bcryptjs.hash(
+        await bcryptjs.genSalt(parseInt(process.env.BCRYPT_SALT, 10)),
         value
       );
     } catch (exception) {
@@ -34,7 +34,7 @@ export default class BcryptHelper {
     hash: string
   ): Promise<boolean | undefined> {
     try {
-      return bcrypt.COMPARE(value, hash);
+      return bcryptjs.compare(value, hash);
     } catch (exception) {
       console.error(exception);
     }

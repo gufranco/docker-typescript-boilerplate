@@ -19,7 +19,7 @@ export default class UserController extends BaseController {
   }
 
   /**
-   * applyRoutes
+   * applyRoutes - Apply the HTTP routes to methods
    *
    * @param {Application} httpRouter
    */
@@ -44,7 +44,7 @@ export default class UserController extends BaseController {
   }
 
   /**
-   * signup - Efetua cadastro do usuário
+   * signup - User's sign up
    *
    * @param {Request} request
    * @param {Response} response
@@ -59,7 +59,7 @@ export default class UserController extends BaseController {
   }
 
   /**
-   * signin - Efetua autenticação do usuário
+   * signin - User's sign in
    *
    * @param {Request} request
    * @param {Response} response
@@ -71,7 +71,7 @@ export default class UserController extends BaseController {
   }
 
   /**
-   * signoff - Efetua desautenticação do usuário
+   * signoff - User's sign off
    *
    * @param {Request} request
    * @param {Response} response
