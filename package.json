@@ -6,9 +6,8 @@
   "author": "Gustavo Franco",
   "license": "MIT",
   "scripts": {
-    "start": "yarn run build:live",
     "build": "tsc -p .",
-    "build:live": "nodemon"
+    "dev": "nodemon"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
