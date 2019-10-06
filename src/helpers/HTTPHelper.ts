@@ -1,16 +1,10 @@
-// Express.js
 import express, { Application } from "express";
 import bodyParser from "body-parser";
 import morgan from "morgan";
 import helmet from "helmet";
 
-// Passport
-import passport, { PassportStatic } from "passport";
-import { Strategy as JwtStrategy } from "passport-jwt";
-
 export default class HTTPHelper {
   private static expressInstance: Application;
-  private static passportInstance: PassportStatic;
 
   /**
    * GET_EXPRESS_INSTANCE - Gera uma instância do Express já configurada
@@ -32,27 +26,6 @@ export default class HTTPHelper {
     }
 
     return this.expressInstance;
-  }
-
-  /**
-   * GET_PASSPORT_INSTANCE - Gera uma instância do Passport configurado para
-   * autenticação do JSON Web Tokens.
-   *
-   * @static
-   * @return {PassportStatic}
-   */
-  public static GET_PASSPORT_INSTANCE(): PassportStatic {
-    if (!this.passportInstance) {
-      this.passportInstance = passport;
-
-      this.passportInstance.use(
-        new JwtStrategy({}, (payload, done) => {
-          console.log(payload);
-        })
-      );
-    }
-
-    return this.passportInstance;
   }
 
   /**
